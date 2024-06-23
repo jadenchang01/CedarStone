@@ -1,0 +1,501 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+}
+
+/* <-----------------Header-----------------> */
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.7)),
+                        url(simages/sample.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.nameheader{
+    display:flex;
+    padding: 2% 6%;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.nameheader a{
+    color: #fff;
+    text-decoration:none;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+nav{
+    display:flex;
+    padding: 2% 6%;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav img{
+    width:150px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align:right;
+}
+
+.nav-links ul li{
+    list-style:none;
+    display:inline-block;
+    padding: 8px 20px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: #fff;
+    text-decoration:none;
+    font-size: 23px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display:block;
+    margin: auto;
+    transition: 0.5s
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box hi{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 18px;
+    color: #fff;
+}
+
+/* <-----------------Header-----------------> */
+
+
+/* <----------------- Education -----------------> */
+
+.education{
+    width:80%;
+    margin:auto;
+    text-align:center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.col{
+    display: flex;
+    gap: 30px; 
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+}
+.education-col{
+    flex-basis: 25%;
+    background: #dce4f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+}
+.education-col img {
+    width: 120%;
+    height: 400px;
+    object-fit: cover; 
+    border-radius: 10px 10px 0 0;
+    display: block;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.education-col:hover{
+    box-shadow: 0 0 20px 0px rgba(4,9,30,0.5);
+}
+.education{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.education-col{
+    flex-basis: 25%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(4,9,30,0.5);
+}
+.layer h3{
+    width:100%;
+    font-weight:300;
+    color:#fff;
+    font-size: 26px;
+    bottom:0;
+    left:50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity:0;
+    transition:0.5s
+}
+.layer:hover h3{
+    bottom: 50%;
+    opacity: 1;
+}
+
+/* timeline */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    width:80%;
+    margin:auto;
+    text-align:center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.timeline h1{
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-top: -30px;
+}
+.timeline h2{
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-bottom: 5px;
+}
+.timeline h4{
+    color: #777;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-bottom: 5px;
+}
+.timeline li{
+    position: relative;
+    color: gray;
+    text-decoration:none;
+    font-size: 12px;
+    text-align: left;
+}
+ul {
+    list-style-type: disc;
+    padding-left: 40px; /* Adjust as needed */
+}
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #151572;
+    top: 200px; /* Adjust this value if needed */
+    bottom: 30px;
+    left: 50%;
+    margin-left: -3px;
+}  
+/* Container around content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+}
+/* The circles on the timeline */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #fff;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+/* Place the container to the left */
+.left {
+    left: -7%;
+}
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #dce4f3;
+}
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #dce4f3 transparent transparent;
+}
+.right::after {
+    left: -16px;    
+}
+.content {
+    padding: 20px 30px;
+    background-color: #dce4f3; 
+    position: relative;
+    border-radius: 6px;
+}
+.timeline .hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color:#151572;
+    border: 1px solid #151572;
+    padding: 12px 34px;
+    font-size: 13px;
+    background:transparent;
+    position: relative;
+    cursor: pointer;
+}
+.timeline .hero-btn:hover{
+    border: 1px solid #dce4f3;
+    background: #dce4f3;
+    transition: 1s
+}
+/* <----------------- Education -----------------> */
+
+
+/* <----------------- Projects -----------------> */
+.papers{
+    width:80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.row{
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+}
+.papers-row {
+    background: #253046; 
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+}
+.papers-row img {
+    width: 40%; /* Ensure the image fits within its container */
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    border-radius: 10px 0 0 10px; /* Adjust to round left corners */
+    margin-right: 20px; /* Space between image and text */
+}
+.text-content {
+    display: flex;
+    flex-direction: column;
+    text-align: right; /* Align text to the right */
+    flex: 1; /* Allow text to take the remaining space */
+}
+.papers-row p{
+    padding: 100;
+}
+.papers-row:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+    background: #c4d1e8; 
+}
+.papers-row:hover h3{
+    color: #000;
+}
+.papers-row:hover p{
+    color: #000;
+}
+.papers-row h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: right;
+    color: #dbd9d9;
+}
+.papers-row p{
+    color: #dbd9d9;
+}
+/* <----------------- Projects -----------------> */
+
+.testimonials{
+    width: 100%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.testimonial-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.testimonial-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+.testimonial-col p{
+    padding: 0;
+}
+.testimonial-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/sample.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.cta h1{
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+/* <----------------- Footer -----------------> */
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer h3{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.icons .fa-brands{
+    color: #151572;
+    margin: 0 20px;
+    cursor: pointer;
+    padding: 18px 0; 
+}
+/* <----------------- Footer -----------------> */
+
+.subheader{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/sample.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+.location{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+.location iframe{
+    width:100%;
+}
+
+.contact-col{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.contact-col div h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color:#555;
+    font-weight: 400;
+}
+
+.contact-col input, .contact-col textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+}
