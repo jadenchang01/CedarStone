@@ -6,22 +6,18 @@
 
 /* <-----------------Header-----------------> */
 .header{
-    min-height: 100vh;
+    height: 70px;
     width: 100%;
-    background-image:linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.7)),
-                        url(simages/sample.jpeg);
     background-position: center;
     background-size: cover;
-    position: relative;
-}
-.text-box h1{
-    color: #ffffff;
+    position: fixed;
+    z-index: 1000;
 }
 .nameheader{
     display:flex;
-    padding: 2% 6%;
     justify-content:space-between;
     align-items:center;
+    background: #023524;
 }
 .nameheader a{
     color: #fff;
@@ -34,6 +30,7 @@ nav{
     padding: 2% 6%;
     justify-content:space-between;
     align-items:center;
+    background: #023524;
 }
 nav img{
     width:150px;
@@ -41,6 +38,7 @@ nav img{
 .nav-links{
     flex: 1;
     text-align:right;
+    justify-content: flex-end;
 }
 .nav-links ul li{
     list-style:none;
@@ -65,22 +63,24 @@ nav img{
 .nav-links ul li:hover::after{
     width: 100%;
 }
-.text-box{
-    width: 90%;
+.intro {
+    background: url('simages/introbg.jpg');
+    background-size: cover;
+    width: 100%;
+    text-align: center;
     color: #fff;
-    position: absolute;
-    top: 80%;
+    height: 100vh;
+    margin: auto;
+}
+.intro h1 {
+    color: #ffffff;
+    font-size: 62px;
+    width: 90%;
+    position: relative;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-}
-.text-box hi{
-    font-size: 62px;
-}
-.text-box p{
-    margin: 10px 0 40px;
-    font-size: 18px;
-    color: #fff;
 }
 /* <-----------------Header-----------------> */
 
@@ -89,18 +89,18 @@ nav img{
 .about-us{
     width:80%;
     margin: auto;
-    padding-top: 80px;
-    padding-bottom: 20px;
+    padding-top: 120px;
 }
 .about-col {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;  /* Center content vertically for a better look */
+    justify-content: center; 
 }
 .about-col img{
     max-width: 100%;
     height: auto;
+    padding-left: 20px;
 }
 .about-us h1{
     padding-top: 0;
@@ -145,7 +145,7 @@ nav img{
     width:80%;
     margin:auto;
     text-align:center;
-    padding-top: 100px;
+    padding-top: 150px;
 }
 h1{
     color: #023524;
@@ -166,33 +166,6 @@ p{
     margin: auto;
     padding-top: 20px;
     padding-left: 45px;
-}
-.cap-col{
-    flex-basis: 25%;
-    background: #d9d9d9;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px;
-    box-sizing: border-box;
-    /* transition: 0.5s; */
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    text-align: center; 
-}
-.cap-col img {
-    width: 120%;
-    height: 400px;
-    object-fit: cover; 
-    border-radius: 10px 10px 0 0;
-    display: block;
-}
-.cap-col{
-    flex-basis: 25%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
 }
 .layer{
     background: rgba(4,9,30,0.5);
@@ -216,13 +189,13 @@ p{
     display: flex;
     flex-direction: column;
     gap: 10px; 
-    width: 80%;
+    width: 100%;
     margin: auto;
     padding-top: 20px;
     margin-bottom: 20px;
 }
 .caps-row {
-    background: #023524; 
+    background: linear-gradient(to right, rgb(26, 24, 24), rgb(2, 53, 36));
     border-radius: 10px;
     padding: 20px;
     box-sizing: border-box;
@@ -230,15 +203,13 @@ p{
     display: flex;
     flex-direction: row;
     align-items: center;
-    text-decoration: none; /* Remove underline from links */
-    color: inherit; /* Inherit text color */
+    text-decoration: none;
 }
 .caps-row img {
-    width: 40%; /* Ensure the image fits within its container */
-    height: 100px; /* Fixed height for consistency */
-    object-fit: cover; /* Maintain aspect ratio and cover the area */
-    border-radius: 10px 0 0 10px; /* Adjust to round left corners */
-    margin-right: 20px; /* Space between image and text */
+    width: 50%; /* Ensure the image fits within its container */
+    height: 120px; /* Fixed height for consistency */
+    object-fit: cover;
+    border-radius: 10px 0 0 10px; 
 }
 .text-content {
     display: flex;
@@ -248,25 +219,25 @@ p{
 }
 .caps-row p{
     padding: 100;
+    opacity: 0;
 }
 .caps-row:hover {
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
     background: #008055; 
 }
 .caps-row:hover h3{
-    color: #000;
+    color: #dbd9d9;;
 }
 .caps-row:hover p{
-    color: #000;
+    color: #dbd9d9;
+    opacity: 1;
 }
 .caps-row h3{
     margin-top: 16px;
     margin-bottom: 15px;
     text-align: right;
     color: #dbd9d9;
-}
-.caps-row p{
-    color: #dbd9d9;
+    font-size: 22px;
 }
 /* <----------------- Capabilities -----------------> */
 
@@ -287,21 +258,42 @@ p{
     padding: 25px;
     cursor: pointer;
     display: flex;
+    flex-direction: column;
 }
-.updates-col img{
-    height: 40px;
-    margin-left: 5px;
-    margin-right: 30px;
-    border-radius: 50%;
+.updates-col ul {
+    padding: 0;
+    list-style-type: none; 
 }
 .updates-col li{
     padding: 10px 10px;
     color: grey;
+    position: relative;
+    margin-bottom: 20px; 
+    font-size: 16.5px;
+}
+.updates-col a {
+    color: inherit; /* Inherit color from the parent element */
+    text-decoration: none; /* Remove underline */
+}
+.updates-col a:hover {
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+.updates-col ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid #ccc; 
 }
 .updates-col h3{
     margin-top: 15px;
     text-align: left;
     color: #023524;
+    font-size: 20px;
+}
+.updates-col ul li:last-child::after {
+    content: none; /* Remove the border for the last item */
 }
 /* <----------------- Announcements -----------------> */
 
