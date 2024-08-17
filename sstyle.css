@@ -304,6 +304,7 @@ nav img{
         padding: 30px;
         width: 100%; 
         box-sizing: border-box; 
+        align-items: center;
     }
     nav {
         display: flex;
@@ -318,7 +319,7 @@ nav img{
         width: auto;
     }
     .nameheader a {
-        font-size: 24px;
+        font-size: 20px;
     }
     .nameheader img{
         margin-right: 10px;
@@ -342,7 +343,7 @@ nav img{
         padding: 10px 0; 
     }
     .nav-links ul li a {
-        font-size: 22px; 
+        font-size: 18px; 
     }
     /* Adjust text box in the header */
     .text-box {
@@ -351,7 +352,7 @@ nav img{
         width: auto;
     }
     .text-box h1 {
-        font-size: 40px; 
+        font-size: 30px; 
     }
     /* About Us section */
     .about-us{
