@@ -309,6 +309,7 @@ nav img{
         padding: 10px;
         justify-content: space-between;
         align-items: flex-start;
+        width: 90%;
     }
     .nameheader {
         left: 20px;
